@@ -14,7 +14,7 @@
 
 <body>
   <h1> Tip Calculator </h1>
-  <form> Bill subtotal: $<input type="text" name="subtotal"><br><br>
+  <form action="calculator.php" method="post"> Bill subtotal: $<input type="text" name="subtotal"><br><br>
     Tip Percentage:<br>
     <?php $percents = 10;
       for ($x = 0; $x < 3; $x++) {
