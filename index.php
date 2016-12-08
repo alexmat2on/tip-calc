@@ -14,13 +14,14 @@
 
 <body>
   <h1> Tip Calculator </h1>
-  <form> Bill subtotal $<input type="text" name="subtotal"><br>
+  <form> Bill subtotal: $<input type="text" name="subtotal"><br><br>
     Tip Percentage:<br>
     <?php $percents = 10;
       for ($x = 0; $x < 3; $x++) {
       echo "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
       $percents += 5;
     }
-    ?>
+    ?><br><br>
+    <input type="submit" value="Submit">
 </body>
 </html>
