@@ -17,8 +17,8 @@
   <form> Bill subtotal $<input type="text" name="subtotal"><br>
     Tip Percentage:<br>
     <?php $percents = 10;
-      for ($x = 0; $x <= 3; $x++) {
-      echo '<input type="radio" name="percents" value="$percents"';
+      for ($x = 0; $x < 3; $x++) {
+      echo "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
       $percents += 5;
     }
     ?>
