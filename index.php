@@ -13,6 +13,6 @@
 </head>
 
 <body>
-  <p> sup brah </p>
+  <?php> echo "hello world!"; <?>
 </body>
 </html>
