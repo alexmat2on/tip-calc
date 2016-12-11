@@ -20,11 +20,11 @@
       for ($x = 0; $x < 3; $x++) {
       echo "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
       $percents += 5;
-    }
-    <br><br>
-    $tip = $_POST["subtotal"]*$_POST["percentage"]/100;
-    Tip: $tip;<br>
-    Total: echo $_POST["subtotal"] + $tip; ?>
+      }
+      $tip = $_POST["subtotal"]*$_POST["percentage"]/100;
+      $total = $tip + $_POST["subtotal"];
+      echo "<br><br>Tip: &#36;$tip<br>Total: &#36;$total";
+    ?><br><br>
     <input type="submit" value="Submit">
 </body>
 </html>
