@@ -14,8 +14,8 @@
 
 <body>
   <h1> Tip Calculator </h1>
-  <form action="calculator.php" method="post"> Bill subtotal: $<input type="text" name="subtotal"><br><br>
-    Tip Percentage:<br>
+  <form action="calculator.php" method="post"><p> Bill subtotal: $<input type="text" name="subtotal"></p>
+    Tip Percentage:<br><p>
     <?php $percents = 10;
       for ($x = 0; $x < 3; $x++) {
       if($percents == 15) $output = "<input type='radio' name='percentage' value='$percents' checked> $percents&#37;";
@@ -23,7 +23,7 @@
       echo $output;
       $percents += 5;
     }
-    ?><br><br>
+    ?></p>
     <input type="submit" value="Submit">
 </body>
 </html>
