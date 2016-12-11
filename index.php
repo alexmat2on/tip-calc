@@ -18,7 +18,9 @@
     Tip Percentage:<br>
     <?php $percents = 10;
       for ($x = 0; $x < 3; $x++) {
-      echo "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
+      if($percents == 15) $output = "<input type='radio' name='percentage' value='$percents' checked> $percents&#37;";
+      else $output = "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
+      echo $output;
       $percents += 5;
     }
     ?><br><br>

@@ -14,16 +14,21 @@
 
 <body>
   <h1> Tip Calculator </h1>
-  <form action="calculator.php" method="post"> Bill subtotal: $<input type="text" name="subtotal"><br><br>
-    Tip Percentage:<br>
-    <?php $percents = 10;
+  <?php
+      echo "<form action='calculator.php' method='post'> Bill subtotal: $<input type='text' name='subtotal' value='$_POST[subtotal]'><br><br>";
+      echo "Tip Percentage:<br>";
+      $percents = 10;
       for ($x = 0; $x < 3; $x++) {
-      echo "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
+      if($percents == $_POST["percentage"]) $output = "<input type='radio' name='percentage' value='$percents' checked> $percents&#37;";
+      else $output = "<input type='radio' name='percentage' value='$percents'> $percents&#37;";
+      echo $output;
       $percents += 5;
-      }
-      $tip = $_POST["subtotal"]*$_POST["percentage"]/100;
-      $total = $tip + $_POST["subtotal"];
-      echo "<br><br>Tip: &#36;$tip<br>Total: &#36;$total";
+    }
+    
+    $tip = $_POST["subtotal"]*$_POST["percentage"]/100;
+    $total = $tip + $_POST["subtotal"];
+    echo "<br><br>Tip: &#36;$tip<br>Total: &#36;$total";
+
     ?><br><br>
     <input type="submit" value="Submit">
 </body>
