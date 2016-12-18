@@ -1,8 +1,55 @@
 html {
   color: #f0f1f4;
   background-color: #16181d;
+  position: relative;
+}
+
+body {
+  position: relative;
+  margin: auto;
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+}
+
+h1 {
+  text-align: center;
+}
+
+#app {
+  background: #d3d6de;
+  color: #636a83;
+  position: absolute;
+  margin: auto;
+  top: 25px;
+  padding: 10px;
+
+  border-style: solid;
+  border-color: #636a83;
+  border-width: 1px;
+}
+
+#answer {
+  padding: 2px;
+  border-style: solid;
+  border-color: #3357cc;
+  border-width: 1px;
+
+  color: #3357cc;
+  text-align: center;
+}
+
+#subtotal {
+  width: 60px;
+}
+
+#custom {
+  width: 25px;
 }
 
 .error {
-  color: #ff0000;
+  color: #cc3333;
 }

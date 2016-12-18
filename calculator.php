@@ -13,6 +13,7 @@
 </head>
 
 <body>
+  <div id="app">
   <h1> Tip Calculator </h1>
   <form action="calculator.php" method="post">
   <?php
@@ -24,9 +25,9 @@
       $is_valid_per = is_numeric($form_per) && $form_per > 0;
 
       if (!$is_valid_sbt)
-	     echo "<p class='error'> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt' class='error'></p>";
+	     echo "<p class='error'> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt' class='error' id='subtotal'></p>";
       else
-	     echo "<p> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt'></p>";
+	     echo "<p> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt' id='subtotal'></p>";
 
       if (!$is_valid_per) {
         echo "<p class='error'>Tip Percentage:<br><p class='error'>";
@@ -39,9 +40,9 @@
         }
         echo "<br>";
         if($_POST["percentage"] == "custom")
-          echo "<input type='radio' name='percentage' value='custom' checked>Custom: <input type='text' name='custom' class='error' value='$form_per'> %";
+          echo "<input type='radio' name='percentage' value='custom' checked>Custom: <input type='text' name='custom' class='error' id='custom' value='$form_per'> %";
         else
-          echo "<input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' class='error'> %";
+          echo "<input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' class='error' id='custom'> %";
         echo "</p></p>";
       }
 
@@ -56,18 +57,20 @@
         }
         echo "<br>";
         if($_POST["percentage"] == "custom")
-          echo "<input type='radio' name='percentage' value='custom' checked>Custom: <input type='text' name='custom' style='width: 30px;' value='$form_per'> %";
+          echo "<input type='radio' name='percentage' value='custom' checked>Custom: <input type='text' name='custom' id='custom' value='$form_per'> %";
         else
-          echo "<input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' style='width: 30px;''> %";
+          echo "<input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' id='custom'> %";
         echo "</p></p>";
       }
 
       if ($is_valid_sbt && $is_valid_per) {
+         echo "<div id='answer'>";
     	   $tip = $form_sbt*$form_per/100;
     	   $total = $tip + $form_sbt;
-    	   echo "<p>Tip: &#36;$tip<br>Total: &#36;$total</p>";
+    	   echo "Tip: &#36;$tip<br>Total: &#36;$total</div>";
       }
   ?>
-    <input type="submit" value="Submit">
+      <p><input type="submit" value="Submit"></p></form>
+  </div>
 </body>
 </html>
