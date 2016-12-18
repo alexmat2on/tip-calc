@@ -24,8 +24,9 @@
             echo $output;
             $percents += 5;
           }
-          echo "<br><input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' id='custom'> %"
+          echo "<br><input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' id='custom'> %";
         ?></p></p>
+        <p>Split: <input type="text" name="split" value=1 id="split"> person(s)</p>
     <p><div id="submit"><input type="submit" value="Submit"></div></p>
     </form>
   </div>

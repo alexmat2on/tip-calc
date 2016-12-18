@@ -46,7 +46,11 @@ h1 {
 }
 
 #custom {
-  width: 25px;
+  width: 30px;
+}
+
+#split {
+  width: 30px;
 }
 
 #submit {

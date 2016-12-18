@@ -20,9 +20,12 @@
       $form_sbt = $_POST["subtotal"];
       if (is_numeric($_POST["percentage"])) $form_per = $_POST["percentage"];
       else $form_per = $_POST["custom"];
+      $form_splt = $_POST["split"];
 
       $is_valid_sbt = is_numeric($form_sbt) && $form_sbt > 0;
       $is_valid_per = is_numeric($form_per) && $form_per > 0;
+      $is_valid_splt = is_numeric($form_splt) && $form_splt > 0;
+
 
       if (!$is_valid_sbt)
 	     echo "<p class='error'> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt' class='error' id='subtotal'></p>";
@@ -63,13 +66,25 @@
         echo "</p></p>";
       }
 
+      if(!$is_valid_splt)
+        echo "<p class='error'>Split: <input type='text' name='split' value=1 id='split' class='error'> person(s)</p>";
+      else
+        echo "<p>Split: <input type='text' name='split' value='$form_splt' id='split'> person(s)</p>";
+
       echo "<p><div id='submit'><input type='submit' value='Submit'></div></p></form>";
 
-      if ($is_valid_sbt && $is_valid_per) {
+      if ($is_valid_sbt && $is_valid_per && $is_valid_splt) {
          echo "<div id='answer'>";
     	   $tip = $form_sbt*$form_per/100;
     	   $total = $tip + $form_sbt;
-    	   echo "Tip: &#36;$tip<br>Total: &#36;$total</div>";
+    	   echo "Tip: &#36;$tip<br>Total: &#36;$total";
+
+         if($form_splt > 1) {
+           $tip_each = $tip / $form_splt;
+           $total_each = ($total / $form_splt);
+           echo "<br>Tip Each: &#36;$tip_each<br>Total each: &#36;$total_each";
+         }
+         echo "</div>";
       }
   ?>
   </div>
