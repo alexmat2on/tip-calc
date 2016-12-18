@@ -4,7 +4,7 @@
 
 Submitted by: **Alexander Matson**
 
-Time spent: **2** hours spent in total
+Time spent: **3.5** hours spent in total
 
 A live demo is available [here](http://atauno.com/tip-calc)
 
@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the functionality!
+* [x] Dark CSS styling
 
 ## Video Walkthrough
 
