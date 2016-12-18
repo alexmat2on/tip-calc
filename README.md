@@ -4,7 +4,7 @@
 
 Submitted by: **Alexander Matson**
 
-Time spent: **3.5** hours spent in total
+Time spent: **4** hours spent in total
 
 A live demo is available [here](http://atauno.com/tip-calc)
 
