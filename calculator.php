@@ -5,7 +5,7 @@
   <meta charset="utf-8">
 
   <title>Tip Calculator</title>
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="styles.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -24,12 +24,12 @@
       $is_valid_per = is_numeric($form_per) && $form_per > 0;
 
       if (!$is_valid_sbt)
-	     echo "<p style='color:#ff0000;'> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt' style='color:#ff0000;'></p>";
+	     echo "<p class='error'> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt' class='error'></p>";
       else
 	     echo "<p> Bill subtotal: $<input type='text' name='subtotal' value='$form_sbt'></p>";
 
       if (!$is_valid_per) {
-        echo "<p style='color:#ff0000;'>Tip Percentage:<br><p style='color:#ff0000;'>";
+        echo "<p class='error'>Tip Percentage:<br><p class='error'>";
         $percents = 10;
         for ($x = 0; $x < 3; $x++) {
           if($percents == $form_per) $output = "<input type='radio' name='percentage' value='$percents' checked> $percents&#37;";
@@ -39,9 +39,9 @@
         }
         echo "<br>";
         if($_POST["percentage"] == "custom")
-          echo "<input type='radio' name='percentage' value='custom' checked>Custom: <input type='text' name='custom' style='width: 30px; color: #ff0000;' value='$form_per'> %";
+          echo "<input type='radio' name='percentage' value='custom' checked>Custom: <input type='text' name='custom' class='error' value='$form_per'> %";
         else
-          echo "<input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' style='width: 30px;''> %";
+          echo "<input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' class='error'> %";
         echo "</p></p>";
       }
 
