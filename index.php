@@ -26,7 +26,7 @@
           }
           echo "<br><input type='radio' name='percentage' value='custom'>Custom: <input type='text' name='custom' id='custom'> %"
         ?></p></p>
-    <p><input type="submit" value="Submit"></p>
+    <p><div id="submit"><input type="submit" value="Submit"></div></p>
     </form>
   </div>
 </body>

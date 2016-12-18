@@ -25,7 +25,7 @@ h1 {
   position: absolute;
   margin: auto;
   top: 25px;
-  padding: 10px;
+  padding: 0px 10px 10px 10px;
 
   border-style: solid;
   border-color: #636a83;
@@ -33,13 +33,12 @@ h1 {
 }
 
 #answer {
-  padding: 2px;
+  padding: 2px 2px 2px 10px;
   border-style: solid;
   border-color: #3357cc;
   border-width: 1px;
 
   color: #3357cc;
-  text-align: center;
 }
 
 #subtotal {
@@ -48,6 +47,11 @@ h1 {
 
 #custom {
   width: 25px;
+}
+
+#submit {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .error {

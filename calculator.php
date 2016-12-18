@@ -63,6 +63,8 @@
         echo "</p></p>";
       }
 
+      echo "<p><div id='submit'><input type='submit' value='Submit'></div></p></form>";
+
       if ($is_valid_sbt && $is_valid_per) {
          echo "<div id='answer'>";
     	   $tip = $form_sbt*$form_per/100;
@@ -70,7 +72,6 @@
     	   echo "Tip: &#36;$tip<br>Total: &#36;$total</div>";
       }
   ?>
-      <p><input type="submit" value="Submit"></p></form>
   </div>
 </body>
 </html>
