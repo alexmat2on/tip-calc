@@ -36,7 +36,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The only challenges I had were related to PHP because this is my first time creating a project in it.
+Mainly, I had to search up and learn PHP syntax to get started, but after that I had no difficulties. 
 
 ## License
 
